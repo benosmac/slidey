@@ -31,9 +31,11 @@ a {
 }
 .primary-bg {
   background-color: var(--primary);
+  color: color-mix(in oklab, var(--primary), #fff 50%);
 }
 .secondary-bg {
   background-color: var(--secondary);
+  color: color-mix(in oklab, var(--secondary), #fff 50%);
 }
 
 @keyframes slideOutUp {
