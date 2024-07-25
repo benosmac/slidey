@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Slidey">
+  <main transition:name="page" transition:animate="initial" data-out="up">
+    <a href="/" class="primary-bg"
+      ><span class="title" transition:name="title-up">Up</span></a
+    >
+  </main>
+</Layout>
+
+<style is:global>
+  main {
+    grid-template-rows: 1fr;
+  }
+  ::view-transition-new(page) {
+    animation: slideInDown 0.5s ease;
+  }
+  ::view-transition-old(page) {
+    animation: slideOutDown 0.5s ease;
+  }
+</style>
